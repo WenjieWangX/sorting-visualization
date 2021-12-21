@@ -1,0 +1,35 @@
+.array-container {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  height: 400px;
+  align-items: flex-end;
+  margin: 10px auto 20px auto;
+  border-bottom: 1px solid white;
+}
+
+.array-bar {
+  width: 5px;
+  background-color: rgb(126, 97, 160);
+  display: inline-block;
+  margin: 0 1px;
+}
+
+header {
+  justify-content: center;
+  display: flex;
+  color: white !important;
+  font-style: italic;
+  font-size: 50px;
+  margin: auto;
+  margin-bottom: 40px;
+  margin-top: 30px;
+  width: 80%;
+}
+
+.generate-buttons {
+  justify-content: center;
+  display: flex;
+  margin: 70px auto 30px auto;
+  width: fit-content;
+}
