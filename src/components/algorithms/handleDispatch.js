@@ -3,9 +3,10 @@ import {
   setRunning,
   setCurrentBubble,
   setSorted,
+  setSwappers,
 } from "../../actions";
 
-export const handleDispatch = (toDispatch, dispatch, array, speed) => {
+export const HandleDispatch = (toDispatch, dispatch, array, speed) => {
   if (!toDispatch.length) {
     //dispatch(setCurrentBubble(array.map((num, index) => index)));
     setTimeout(() => {
@@ -25,9 +26,15 @@ export const handleDispatch = (toDispatch, dispatch, array, speed) => {
   // ----------------------------------------------
   // toDispatch[0].length > 3 ? setArray : setSwappers;
   //dispatch(dispatchFunction(toDispatch.shift()));
-  let dispatchFunction = toDispatch[0].length > 3 ? setArray : setCurrentBubble;
+  let dispatchFunction =
+    toDispatch[0].length > 3
+      ? setArray
+      : toDispatch[0].length === 2
+      ? setSwappers
+      : setCurrentBubble;
+
   dispatch(dispatchFunction(toDispatch.shift()));
   setTimeout(() => {
-    handleDispatch(toDispatch, dispatch, array, speed);
+    HandleDispatch(toDispatch, dispatch, array, speed);
   }, speed);
 };

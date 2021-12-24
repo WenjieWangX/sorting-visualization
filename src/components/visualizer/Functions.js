@@ -8,6 +8,8 @@ import { BubbleSort } from "../algorithms/BubbleSort";
 import { InsertionSort } from "../algorithms/InsertionSort";
 import { SelectionSort } from "../algorithms/SelectionSort";
 import { MergeSort } from "../algorithms/MergeSort";
+import { QuickSort } from "../algorithms/QuickSort";
+import { HeapSort } from "../algorithms/HeapSort";
 
 export const generateArray = (dispatch, length) => {
   let newArray = [];
@@ -29,6 +31,10 @@ export const sort = (dispatch, array, speed, algorithm) => {
       ? SelectionSort
       : algorithm === "MergeSort"
       ? MergeSort
+      : algorithm === "QuickSort"
+      ? QuickSort
+      : algorithm === "HeapSort"
+      ? HeapSort
       : null;
   dispatch(setSorted([]));
   dispatch(deleteCurrentIndex([]));

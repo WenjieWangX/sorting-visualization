@@ -7,11 +7,11 @@ import { updateAlgorithm } from "../../actions";
 import { setSize } from "../../actions";
 import "../styling/Style.css";
 
-export const MergeSortVisualizer = () => {
+export const HeapSortVisualizer = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(updateAlgorithm("MergeSort"));
+    dispatch(updateAlgorithm("HeapSort"));
     generateArray(dispatch, 0);
     dispatch(setSize(0));
     $("body").css("background-color", "#1a1a1a");
@@ -19,5 +19,5 @@ export const MergeSortVisualizer = () => {
     $(".segment").css("margin", "");
   }, []);
 
-  return <BodyContents title="Merge Sort" TypeOfSorting="Merge Sort" />;
+  return <BodyContents title="Heap Sort" TypeOfSorting="Heap Sort" />;
 };

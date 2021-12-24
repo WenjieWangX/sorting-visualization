@@ -1,5 +1,5 @@
 // import { setArray, setRunning, setSorted, setSwappers } from "../../actions";
-import { handleDispatch } from "./handleDispatch";
+import { HandleDispatch } from "./HandleDispatch";
 
 export const InsertionSort = (stateArray, dispatch, speed) => {
   let array = stateArray.slice(0),
@@ -8,10 +8,9 @@ export const InsertionSort = (stateArray, dispatch, speed) => {
 
   for (let i = 0; i < array.length; i++) {
     for (let j = i; j > 0; j--) {
+      toDispatch.push([j, j - 1]);
       if (array[j] < array[j - 1]) {
-        const temp = array[j];
-        array[j] = array[j - 1];
-        array[j - 1] = temp;
+        swap(array, j, j - 1);
         toDispatch.push(array.slice(0));
       }
     }
@@ -20,20 +19,12 @@ export const InsertionSort = (stateArray, dispatch, speed) => {
     toDispatch.push(array.length - 1 - round);
     round++;
   }
-  handleDispatch(toDispatch, dispatch, array, speed);
+  HandleDispatch(toDispatch, dispatch, array, speed);
   return array;
 };
 
-// const handleDispatch = (toDispatch, dispatch, array, speed) => {
-//   if (!toDispatch.length) {
-//     setTimeout(() => {
-//       dispatch(setSorted(array.map((val, index) => index)));
-//       dispatch(setRunning(false));
-//     }, 900);
-//     return;
-//   }
-//   dispatch(setArray(toDispatch.shift()));
-//   setTimeout(() => {
-//     handleDispatch(toDispatch, dispatch, array, speed);
-//   }, speed);
-// };
+const swap = (array, i, j) => {
+  let temp = array[j];
+  array[j] = array[i];
+  array[i] = temp;
+};

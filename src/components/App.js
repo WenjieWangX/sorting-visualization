@@ -1,18 +1,20 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import NavBar from "./NavBar";
-import SortingVisualizer from "./SortingVisualizer";
+import Home from "./Home";
 import { BubbbleSortVisualizer } from "./visualizer/BubbleSortVisualizer";
 import { InsertionSortVisualizer } from "./visualizer/InsertionSortVisualizer";
 import { SelectionSortVisualizer } from "./visualizer/SelectionSortVisualizer";
 import { MergeSortVisualizer } from "./visualizer/MergeSortVisualizer";
+import { QuickSortVisualizer } from "./visualizer/QuickSortVisualizer";
+import { HeapSortVisualizer } from "./visualizer/HeapSortVisualizer";
 
 const App = () => {
   return (
-    <div>
+    <div className="content">
       <BrowserRouter>
         <NavBar />
-        <Route path="/" exact component={SortingVisualizer} />
+        <Route path="/" exact component={Home} />
         <Route
           path="/bubblesort-visualizer"
           exact
@@ -32,6 +34,16 @@ const App = () => {
           path="/mergesort-visualizer"
           exact
           component={MergeSortVisualizer}
+        />
+        <Route
+          path="/quicksort-visualizer"
+          exact
+          component={QuickSortVisualizer}
+        />
+        <Route
+          path="/heapsort-visualizer"
+          exact
+          component={HeapSortVisualizer}
         />
       </BrowserRouter>
     </div>
