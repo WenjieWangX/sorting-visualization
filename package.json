@@ -45,6 +45,11 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^3.2.3"
+    "gh-pages": "^3.2.3",
+    "json-schema": ">=0.4.0",
+    "ansi-regex": ">=5.0.1",
+    "nth-check": ">=2.0.1",
+    "tmpl": ">=1.0.5",
+    "tar": ">=6.1.9"
   }
 }
