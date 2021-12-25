@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import NavBar from "./NavBar";
 import Home from "./Home";
@@ -10,17 +10,11 @@ import { QuickSortVisualizer } from "./visualizer/QuickSortVisualizer";
 import { HeapSortVisualizer } from "./visualizer/HeapSortVisualizer";
 
 const App = () => {
-  useEffect(() => {});
   return (
     <div className="content">
       <BrowserRouter>
         <NavBar />
-        <Route
-          exact
-          path={`/`}
-          render={(routerProps) => <Home routerProps={routerProps} />}
-        />
-
+        <Route path="/" exact component={Home} />
         <Route
           path="/bubblesort-visualizer"
           exact
