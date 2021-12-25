@@ -1,6 +1,6 @@
-export const setCurrentBubble = (array) => {
+export const setFinishedIndex = (array) => {
   return {
-    type: "SET_CURRENT_INDEX",
+    type: "SET_FINISHED_INDEX",
     payload: array,
   };
 };

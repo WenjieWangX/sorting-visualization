@@ -1,7 +1,7 @@
 import {
   setArray,
   setRunning,
-  setCurrentBubble,
+  setFinishedIndex,
   setSorted,
   setSwappers,
 } from "../../actions";
@@ -19,7 +19,7 @@ export const HandleDispatch = (toDispatch, dispatch, array, speed) => {
       ? setArray
       : toDispatch[0].length === 2
       ? setSwappers
-      : setCurrentBubble;
+      : setFinishedIndex;
 
   dispatch(dispatchFunction(toDispatch.shift()));
   setTimeout(() => {

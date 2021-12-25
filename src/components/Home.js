@@ -15,7 +15,7 @@ const Home = () => {
   }, []);
 
   return (
-    <body>
+    <div>
       <header className="header">
         <div className="header__logo-box"></div>
         <div className="header__text-box">
@@ -24,7 +24,7 @@ const Home = () => {
             <span className="heading-primary--main">Visualizer</span>
           </h1>
           <Link
-            to="/bubblesort-visualizer"
+            to="/sorting-visualization/bubblesort-visualizer"
             className="btn btn--white btn--animated"
           >
             Start
@@ -40,22 +40,22 @@ const Home = () => {
           pass through the list is repeated until the list is sorted.
         </p>
       </div>
-      <div className="info-container">
-        <h1 className="info__header">Insertion Sort</h1>
-      </div>
-      <div className="info-container">
-        <h1 className="info__header">Selection Sort</h1>
-      </div>
-      <div className="info-container">
-        <h1 className="info__header">Merge Sort</h1>
-      </div>
-      <div className="info-container">
-        <h1 className="info__header">Quick Sort</h1>
-      </div>
-      <div className="info-container">
-        <h1 className="info__header">Heap Sort</h1>
-      </div> */}
-    </body>
+      // <div className="info-container">
+      //   <h1 className="info__header">Insertion Sort</h1>
+      // </div>
+      // <div className="info-container">
+      //   <h1 className="info__header">Selection Sort</h1>
+      // </div>
+      // <div className="info-container">
+      //   <h1 className="info__header">Merge Sort</h1>
+      // </div>
+      // <div className="info-container">
+      //   <h1 className="info__header">Quick Sort</h1>
+      // </div>
+      // <div className="info-container">
+      //   <h1 className="info__header">Heap Sort</h1>
+      // </div> */}
+    </div>
   );
 };
 

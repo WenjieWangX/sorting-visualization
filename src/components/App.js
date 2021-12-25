@@ -14,34 +14,34 @@ const App = () => {
     <div className="content">
       <BrowserRouter>
         <NavBar />
-        <Route path="sorting-visualizer/" exact component={Home} />
+        <Route path="/sorting-visualization/" exact component={Home} />
         <Route
-          path="/bubblesort-visualizer"
+          path="/sorting-visualization/bubblesort-visualizer"
           exact
           component={BubbbleSortVisualizer}
         />
         <Route
-          path="/insertionsort-visualizer"
+          path="/sorting-visualization/insertionsort-visualizer"
           exact
           component={InsertionSortVisualizer}
         />
         <Route
-          path="/selectionsort-visualizer"
+          path="/sorting-visualization/selectionsort-visualizer"
           exact
           component={SelectionSortVisualizer}
         />
         <Route
-          path="/mergesort-visualizer"
+          path="/sorting-visualization/mergesort-visualizer"
           exact
           component={MergeSortVisualizer}
         />
         <Route
-          path="/quicksort-visualizer"
+          path="/sorting-visualization/quicksort-visualizer"
           exact
           component={QuickSortVisualizer}
         />
         <Route
-          path="/heapsort-visualizer"
+          path="/sorting-visualization/heapsort-visualizer"
           exact
           component={HeapSortVisualizer}
         />
