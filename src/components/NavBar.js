@@ -18,7 +18,7 @@ const NavBar = () => {
         } secondary pointing menu navbar`}
       >
         <Link
-          to="/sorting-visualization"
+          to=""
           onClick={(e) =>
             !isRunning ? onAlgorithmChange("") : e.preventDefault()
           }
@@ -27,7 +27,7 @@ const NavBar = () => {
           Home
         </Link>
         <Link
-          to="/sorting-visualization/bubblesort-visualizer"
+          to="/bubblesort-visualizer"
           onClick={(e) =>
             !isRunning ? onAlgorithmChange("BubbleSort") : e.preventDefault()
           }
@@ -36,7 +36,7 @@ const NavBar = () => {
           Bubble Sort
         </Link>
         <Link
-          to="/sorting-visualization/insertionsort-visualizer"
+          to="/insertionsort-visualizer"
           onClick={(e) =>
             !isRunning ? onAlgorithmChange("InsertionSort") : e.preventDefault()
           }
@@ -45,7 +45,7 @@ const NavBar = () => {
           Insertion Sort
         </Link>
         <Link
-          to="/sorting-visualization/selectionsort-visualizer"
+          to="/selectionsort-visualizer"
           onClick={(e) =>
             !isRunning ? onAlgorithmChange("SelectionSort") : e.preventDefault()
           }
@@ -54,7 +54,7 @@ const NavBar = () => {
           Selection Sort
         </Link>
         <Link
-          to="/sorting-visualization/mergesort-visualizer"
+          to="/mergesort-visualizer"
           onClick={(e) =>
             !isRunning ? onAlgorithmChange("MergeSort") : e.preventDefault()
           }
@@ -63,7 +63,7 @@ const NavBar = () => {
           Merge Sort
         </Link>
         <Link
-          to="/sorting-visualization/quicksort-visualizer"
+          to="/quicksort-visualizer"
           onClick={(e) =>
             !isRunning ? onAlgorithmChange("QuickSort") : e.preventDefault()
           }
@@ -72,7 +72,7 @@ const NavBar = () => {
           Quick Sort
         </Link>
         <Link
-          to="/sorting-visualization/heapsort-visualizer"
+          to="/heapsort-visualizer"
           onClick={(e) =>
             !isRunning ? onAlgorithmChange("HeapSort") : e.preventDefault()
           }

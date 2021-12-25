@@ -14,7 +14,7 @@ const App = () => {
     <div className="content">
       <BrowserRouter>
         <NavBar />
-        <Route path={process.env.PUBLIC_URL + "/"} exact component={Home} />
+        <Route path="/" component={Home} />
         <Route
           path="/bubblesort-visualizer"
           exact
