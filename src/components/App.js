@@ -14,7 +14,7 @@ const App = () => {
     <div className="content">
       <BrowserRouter>
         <NavBar />
-        <Route path="/sorting-visualization/" exact component={Home} />
+        <Route path="/sorting-visualization" exact component={Home} />
         <Route
           path="/sorting-visualization/bubblesort-visualizer"
           exact
