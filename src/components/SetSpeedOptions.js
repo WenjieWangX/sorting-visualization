@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { setSpeed } from "../actions";
-// import { generateArray } from "./visualizer/Functions";
 import "./styling/Dropdown.css";
 
 export const SetSpeedOptions = () => {

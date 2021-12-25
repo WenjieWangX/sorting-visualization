@@ -1,11 +1,3 @@
-// import {
-//   setArray,
-//   setRunning,
-//   setCurrentBubble,
-//   setSorted,
-//   setSwappers,
-//   deleteCurrentIndex,
-// } from "../../actions";
 import { HandleDispatch } from "./HandleDispatch";
 
 export const BubbleSort = (stateArray, dispatch, speed) => {
@@ -17,14 +9,11 @@ export const BubbleSort = (stateArray, dispatch, speed) => {
   while (!sorted) {
     sorted = true;
     for (let i = 0; i < array.length - 1 - round; i++) {
-      //toDispatch.push([i, i + 1]);
       toDispatch.push([i, i + 1]);
       if (array[i] > array[i + 1]) {
-        //toDispatch.push([i, i + 1, true]);
         swap(array, i, i + 1);
         sorted = false;
         toDispatch.push(array.slice(0));
-        //toDispatch.push([]);
       }
     }
     toDispatch.push(array.length - 1 - round);

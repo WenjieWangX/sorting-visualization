@@ -1,4 +1,3 @@
-// import { setArray, setRunning, setSorted, setSwappers } from "../../actions";
 import { HandleDispatch } from "./HandleDispatch";
 
 export const InsertionSort = (stateArray, dispatch, speed) => {

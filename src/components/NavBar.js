@@ -18,7 +18,7 @@ const NavBar = () => {
         } secondary pointing menu navbar`}
       >
         <Link
-          to="/"
+          to="sorting-visualizer/"
           onClick={(e) =>
             !isRunning ? onAlgorithmChange("") : e.preventDefault()
           }
